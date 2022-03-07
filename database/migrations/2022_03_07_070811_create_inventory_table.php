@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('inventory', function (Blueprint $table) {
             $table->id();
+            $table->string('gambar_item');
             $table->string('nama_item');
             $table->bigInteger('harga_item');
             $table->bigInteger('jumlah');

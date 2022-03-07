@@ -40,9 +40,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-          <form action="{{ url('tambah-inventori') }}" method="POST">
+          <form action="{{ url('tambah-inventori') }}" method="POST" enctype="multipart/form-data">
               @csrf
 
+              <div class="form-group mb-3">
+                  <label for="">Gambar Item</label>
+                  <input type="file" name="gambar_item" class="form-control">
+              </div>
               <div class="form-group mb-3">
                   <label for="">Nama Item</label>
                   <input type="text" name="nama_item" class="form-control">

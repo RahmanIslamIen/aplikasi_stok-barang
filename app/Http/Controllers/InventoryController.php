@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class InventoryController extends Controller
 {
-    // public function create()
-    // {
-    //     return view('item_');
-    // }
-
+    
     public function store(Request $request)
     {
         $inventory = new Inventory;
+
+        if($request->hasfile('gambar_item'))
+        {
+            $file = $request->file('gambar_item');
+            $extenstion = $file->getClientOriginalExtension();
+            $namaFile = time().'.'.$extenstion;
+            $file->move('uploads/inventory/', $namaFile);
+            $inventory->gambar_item = $namaFile;
+        }
 
         $inventory->nama_item = $request->input('nama_item');
         $inventory->harga_item = $request->input('harga_item');
