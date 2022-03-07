@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\InventoryController;
+use GuzzleHttp\Promise\Create;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('item_inventory');
 });
+
+//tambah data bagian inventori
+// Route::get('tambah-inventori', [InventoryController::class, 'create']);
+Route::post('tambah-inventori', [InventoryController::class, 'store']);
