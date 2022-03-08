@@ -9,6 +9,6 @@
 }
 
 .gambarInventori {
-    width: 240px;
-    height: 100px;
+    height: 250px;
+    object-fit: cover;
 }

@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class InventoryController extends Controller
 {
+
+    public function tampilData()
+    {
+        $inventory = Inventory::all();
+        return view('item_inventory', compact('inventory'));
+    }
     
     public function store(Request $request)
     {
@@ -28,5 +34,12 @@ class InventoryController extends Controller
         $inventory->save();
 
         return redirect()->back()->with('satus', 'inventori barang berhasil ditambahkan');
+    }
+
+
+    public function hapusData($id){
+        $inventory = Inventory::find($id);
+        $inventory->delete();
+        return redirect()->back()->with('status','inventori berhasil di hapus');
     }
 }

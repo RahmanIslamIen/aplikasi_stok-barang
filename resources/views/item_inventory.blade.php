@@ -14,20 +14,23 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 container_konten">
-    
+  
+  @foreach ($inventory as $item)
+
   <div class="col">
     <div class="card h-100">
-      <img src="..." class="card-img-top gambarInventori" alt="...">
+      <img src="/uploads/inventory/{{ $item->gambar_item }}" class="card-img-top gambarInventori">
       <div class="card-body">
-        <h5 class="card-title">nama item</h5>
-        <p class="card-text">harga item</p>
-        <p>jumlah item - satuan</p>
-        <p>harga total</p>
-        <button type="button" class="btn btn-danger">Hapus</button>
+        <h5 class="card-title">{{ $item->nama_item }}</h5>
+        <p class="card-text">{{ $item->harga_item }}</p>
+        <p>{{ $item->jumlah }} . {{ $item->satuan }}</p>
+        <a href="{{ url('hapus-inventory/'.$item->id) }}" type="button" class="btn btn-danger">Hapus</a>
       </div>
     </div>
   </div>
   
+  @endforeach
+
 </div>
 
 

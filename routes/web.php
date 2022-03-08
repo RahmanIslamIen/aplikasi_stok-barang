@@ -16,10 +16,11 @@ use GuzzleHttp\Promise\Create;
 |
 */
 
-Route::get('/', function () {
-    return view('item_inventory');
-});
+//bagain beranda
+Route::get('/', [InventoryController::class, 'tampilData']);
 
 //tambah data bagian inventori
-// Route::get('tambah-inventori', [InventoryController::class, 'create']);
 Route::post('tambah-inventori', [InventoryController::class, 'store']);
+
+//hapus data inventori
+Route::get('hapus-inventory/{id}', [InventoryController::class, 'hapusData']);
