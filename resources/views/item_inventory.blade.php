@@ -19,7 +19,7 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="inventori" role="tabpanel" aria-labelledby="home-tab">
-    
+
       <div class="row">
         <!-- Button modal tambah data -->
         <button type="button" class="btn btn-success btn-tambahData" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -37,7 +37,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ $item->nama_item }}</h5>
               <p class="card-text">{{ $item->harga_item }}</p>
-              <p>{{ $item->jumlah }} . {{ $item->satuan }}</p>
+              <p>{{ $item->jumlah }} {{ $item->satuan }}</p>
               <a href="{{ url('hapus-inventory/'.$item->id) }}" type="button" class="btn btn-danger">Hapus</a>
             </div>
           </div>
