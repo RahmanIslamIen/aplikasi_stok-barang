@@ -8,6 +8,10 @@
     padding: 20px;
 }
 
+.bagianMenu {
+    margin-top: 15px;
+}
+
 .gambarInventori {
     height: 250px;
     object-fit: cover;

@@ -69,4 +69,5 @@ class InventoryController extends Controller
         $inventory->delete();
         return redirect()->back()->with('status','inventori berhasil di hapus');
     }
+
 }

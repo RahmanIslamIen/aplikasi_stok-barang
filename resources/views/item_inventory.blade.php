@@ -6,7 +6,7 @@
 
 @section('konten_item')
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-tabs bagianMenu" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#inventori" type="button" role="tab" aria-controls="home" aria-selected="true">
       Beranda
@@ -14,7 +14,7 @@
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#diagram" type="button" role="tab" aria-controls="profile" aria-selected="false">
-      Grafik
+      Grafik Inventori
     </button>
   </li>
   <li class="nav-item" role="presentation">
@@ -38,7 +38,7 @@
         @foreach ($inventory as $item)
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card">
             <img src="/uploads/inventory/{{ $item->gambar_item }}" class="card-img-top gambarInventori">
             <div class="card-body">
               <h5 class="card-title">{{ $item->nama_item }}</h5>
@@ -98,6 +98,50 @@
 
   </div>
   <div class="tab-pane fade" id="diagram" role="tabpanel" aria-labelledby="profile-tab">
+    
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+      var cData = JSON.parse(`<?php echo $chart_data= $item->jumlah; ?>`);
+
+      const labels = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+      ];
+
+      const data = {
+        labels: labels,
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          cData.data,
+        }]
+      };
+
+      const config = {
+        type: 'line',
+        data: data,
+        options: {}
+      };
+    </script>
+
+    <script>
+      const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+    </script>
+
 
   </div>
   <div class="tab-pane fade" id="aktivitas" role="tabpanel" aria-labelledby="contact-tab">
