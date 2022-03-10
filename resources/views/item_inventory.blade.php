@@ -8,13 +8,19 @@
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#inventori" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#inventori" type="button" role="tab" aria-controls="home" aria-selected="true">
+      Beranda
+    </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#diagram" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#diagram" type="button" role="tab" aria-controls="profile" aria-selected="false">
+      Grafik
+    </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#aktivitas" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#aktivitas" type="button" role="tab" aria-controls="contact" aria-selected="false">
+      Value Aset
+    </button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -39,6 +45,7 @@
               <p class="card-text">{{ $item->harga_item }}</p>
               <p>{{ $item->jumlah }} {{ $item->satuan }}</p>
               <a href="{{ url('hapus-inventory/'.$item->id) }}" type="button" class="btn btn-danger">Hapus</a>
+              <a href="{{ url('mengubah-inventori/'.$item->id) }}" type="button" class="btn btn-primary">Ubah</a>
             </div>
           </div>
         </div>
@@ -47,7 +54,7 @@
 
       </div>
 
-      <!-- Modal -->
+      <!-- Modal tambah data -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -69,7 +76,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="">Harga Item</label>
-                        <input type="text" name="harga_item" class="form-control">
+                        <input type="number" name="harga_item" class="form-control">
                     </div>
                     <div class="form-group mb-3">
                         <label for="">Jumlah Item</label>

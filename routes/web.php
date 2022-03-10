@@ -22,5 +22,9 @@ Route::get('/', [InventoryController::class, 'tampilData']);
 //tambah data bagian inventori
 Route::post('tambah-inventori', [InventoryController::class, 'store']);
 
+//update data inventori
+Route::get('mengubah-inventori/{id}', [InventoryController::class, 'mengubahData']);
+Route::put('ubah-inventori/{id}', [InventoryController::class, 'ubahData']);
+
 //hapus data inventori
 Route::get('hapus-inventory/{id}', [InventoryController::class, 'hapusData']);
