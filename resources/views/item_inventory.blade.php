@@ -99,16 +99,13 @@
   </div>
   <div class="tab-pane fade" id="diagram" role="tabpanel" aria-labelledby="profile-tab">
     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <div>
       <canvas id="myChart"></canvas>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <script>
-
-      var cData = JSON.parse(`<?php echo $chart_data= $item->jumlah; ?>`);
-
       const labels = [
         'January',
         'February',
@@ -124,7 +121,7 @@
           label: 'My First dataset',
           backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgb(255, 99, 132)',
-          cData.data,
+          data: [0, 10, 5, 2, 20, 30, 45],
         }]
       };
 
@@ -141,8 +138,7 @@
         config
       );
     </script>
-
-
+    
   </div>
   <div class="tab-pane fade" id="aktivitas" role="tabpanel" aria-labelledby="contact-tab">
     
