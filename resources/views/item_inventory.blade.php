@@ -117,12 +117,26 @@
 
       const data = {
         labels: labels,
-        datasets: [{
-          label: 'My First dataset',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-        }]
+        datasets: [
+          {
+          label: 'Barang Masuk',
+          backgroundColor: '#8A39E1',
+          borderColor: '#8A39E1',
+          data: [5, 10, 5, 2, 20, 30, 45],
+          },
+          {
+          label: 'Barang Keluar',
+          backgroundColor: '#00C897',
+          borderColor: '#00C897',
+          data: [10, 9, 8, 4, 15, 24, 28],
+          },
+          {
+          label: 'Barang Rusak',
+          backgroundColor: '#4D77FF',
+          borderColor: '#4D77FF',
+          data: [8, 7, 6, 9, 12, 14, 22],
+          }
+      ]
       };
 
       const config = {
@@ -141,6 +155,7 @@
     
   </div>
   <div class="tab-pane fade" id="aktivitas" role="tabpanel" aria-labelledby="contact-tab">
+    <h1>Perhitungan Jumlah asset</h1>
     
   </div>
 </div>
