@@ -42,7 +42,7 @@
             <img src="/uploads/inventory/{{ $item->gambar_item }}" class="card-img-top gambarInventori">
             <div class="card-body">
               <h5 class="card-title">{{ $item->nama_item }}</h5>
-              <p class="card-text">{{ $item->harga_item }}</p>
+              <p class="card-text">Harga: {{ $item->harga_item }}</p>
               <p>{{ $item->jumlah }} {{ $item->satuan }}</p>
               <a href="{{ url('hapus-inventory/'.$item->id) }}" type="button" class="btn btn-danger">Hapus</a>
               <a href="{{ url('mengubah-inventori/'.$item->id) }}" type="button" class="btn btn-primary">Ubah</a>
@@ -97,7 +97,7 @@
       </div>
 
   </div>
-  <div class="tab-pane fade" id="diagram" role="tabpanel" aria-labelledby="profile-tab">
+  <div class="tab-pane fade container_konten" id="diagram" role="tabpanel" aria-labelledby="profile-tab">
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -154,9 +154,18 @@
     </script>
     
   </div>
-  <div class="tab-pane fade" id="aktivitas" role="tabpanel" aria-labelledby="contact-tab">
+  <div class="tab-pane fade container_konten" id="aktivitas" role="tabpanel" aria-labelledby="contact-tab">
     <h1>Perhitungan Jumlah asset</h1>
-    
+    <div class="row row-col-1 row-col-md-2">
+      <div class="col">
+        <p>nilai total seluruh inventori</p>
+        <p>Rp 4.000.000</p>
+      </div>
+      <div class="col">
+        <p>Jumlah Total semua inventori</p>
+        <p>Rp 4.000.000</p>    
+      </div>
+    </div>
   </div>
 </div>
 
