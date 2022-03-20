@@ -16,3 +16,13 @@
     height: 250px;
     object-fit: cover;
 }
+
+/* bagian pada konten ketiga */
+.rincian_inventori {
+    width: 80%;
+    margin-top: 20px;
+}
+.bagianPenyimpanan {
+    margin: 10px;
+    padding: 10px;
+}

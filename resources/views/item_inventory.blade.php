@@ -155,6 +155,7 @@
     
   </div>
   <div class="tab-pane fade container_konten" id="aktivitas" role="tabpanel" aria-labelledby="contact-tab">
+    
     <h1>Perhitungan Jumlah asset</h1>
     <div class="row row-col-1 row-col-md-2">
       <div class="col">
@@ -166,6 +167,28 @@
         <p>Rp 4.000.000</p>    
       </div>
     </div>
+
+    <div class="rincian_inventori">
+      <div class="card bagianPenyimpanan">
+        <p>Ruang Simpan Inventori</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="card bagianPenyimpanan">
+        <p>Penyimpanan Hardisk</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="card bagianPenyimpanan">
+        <p>Penyimpanan Barang Rusak</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
